@@ -4,7 +4,10 @@ pipeline {
     stage('CHECKOUT') {
       steps {
         git(url: 'https://github.com/saurabhrai95/helloworld-dummy.git', branch: 'master', changelog: true, credentialsId: '04c4fe5a-c72f-4e4f-8d7d-86fb3e798317')
-        waitForQualityGate(credentialsId: '74f36c3b937e9d36ec83f285bfe46e8263b17fd0', abortPipeline: true)
+        withSonarQubeEnv(installationName: 'sonarqube', credentialsId: '68c055b38f9034f36357777386367e12ac16642d') {
+          waitForQualityGate(credentialsId: '68c055b38f9034f36357777386367e12ac16642d', abortPipeline: true)
+        }
+
       }
     }
   }

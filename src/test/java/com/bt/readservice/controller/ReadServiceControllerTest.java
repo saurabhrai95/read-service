@@ -52,7 +52,7 @@ public class ReadServiceControllerTest {
 		
 		MockHttpServletResponse res= mvc.perform(get("/customer/xyz")).andReturn().getResponse();
 		
-		assertEquals(200,res.getStatus());
+		assertEquals(2003,res.getStatus());
 		
 	}
 	
@@ -80,8 +80,8 @@ public class ReadServiceControllerTest {
 		
 		MockHttpServletResponse res= mvc.perform(get("/customer")).andReturn().getResponse();
 		
-		assertTrue(res.getContentAsString().contains("saurabh"));
-		assertTrue(res.getContentAsString().contains("apurv"));
+		assertTrue(res.getContentAsString().contains("saurabh3"));
+		assertTrue(res.getContentAsString().contains("apurv3"));
 		
 	}
 }

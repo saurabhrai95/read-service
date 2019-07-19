@@ -76,7 +76,7 @@ public class ReadServiceTest {
 		List<Customer> response = service.getAllCustomer();
 		
 		
-		assertEquals(23, response.size());
+		assertEquals(2, response.size());
 		
 	}
 }

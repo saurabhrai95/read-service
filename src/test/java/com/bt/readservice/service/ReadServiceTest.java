@@ -57,10 +57,10 @@ public class ReadServiceTest {
 		Customer response = service.getCustomerByName("xyz");
 		
 		
-		assertEquals("saurabh.3.rai@bt.com", response.getEmail());
-		assertEquals("5d23236c29e73030e02e35cc", response.getId());
-		assertEquals("saurabh", response.getName());
-		assertEquals(123456789, response.getPhone());
+		assertEquals("saurabh.3.rai@bt.com3", response.getEmail());
+		assertEquals("5d23236c29e73030e02e35cc3", response.getId());
+		assertEquals("saurabh3", response.getName());
+		assertEquals(1234567893, response.getPhone());
 		
 	}
 	
@@ -91,7 +91,7 @@ public class ReadServiceTest {
 		List<Customer> response = service.getAllCustomer();
 		
 		
-		assertEquals(2, response.size());
+		assertEquals(23, response.size());
 		
 	}
 }
